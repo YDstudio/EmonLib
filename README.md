@@ -1,0 +1,2 @@
+- 原始 lib: https://github.com/openenergymonitor/EmonLib
+- 修改成 MCP3008 專用

@@ -20,6 +20,8 @@
 
 #endif
 
+#include "Adafruit_MCP3008.h"
+
 // define theoretical vref calibration constant for use in readvcc()
 // 1100mV*1024 ADC steps http://openenergymonitor.org/emon/node/1186
 // override in your code with value for your specific AVR chip
@@ -46,6 +48,8 @@ class EnergyMonitor
 {
   public:
 
+    void setMCP3008(Adafruit_MCP3008 *_mcp3008);
+
     void voltage(unsigned int _inPinV, double _VCAL, double _PHASECAL);
     void current(unsigned int _inPinI, double _ICAL);
 
@@ -65,6 +69,9 @@ class EnergyMonitor
       Irms;
 
   private:
+
+    // MCP3008
+    Adafruit_MCP3008 *mcp3008;
 
     //Set Voltage and current input pins
     unsigned int inPinV;
