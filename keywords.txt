@@ -12,6 +12,7 @@ EnergyMonitor	KEYWORD1
 # Methods and Functions (KEYWORD2)
 #######################################
 
+setMCP3008 KEYWORD2
 voltage	KEYWORD2
 current	KEYWORD2
 voltageTX	KEYWORD2
